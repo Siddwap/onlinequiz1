@@ -10,7 +10,7 @@
 
 </head>
 
-<div id='timediv'>Exam ends in <span id='time'>05:00</span> minutes!</div>
+<div id='timediv' style="background-color:black; color:white; width: 100%; position:fixed; margin-top: -15px; padding: 12px; ">Exam ends in <span id='time'>05:00</span> minutes! It Will be Submited Automaticly After Time Ends!</div>
 <div class="jumbotron my-4">
 
   <form id="myForm" class="form" autocomplete="off" onsubmit="return saveAns()"  action="/student/calculate-marks" method="POST">
@@ -115,7 +115,7 @@ function startTimer(duration, display) {
 	}, 1000);
 }
 window.onload = function() {
-	var examTime = 600;
+	var examTime = 300;
 	var display = document.querySelector('#time');
 	startTimer(examTime, display);
 }
